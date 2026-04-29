@@ -7,8 +7,8 @@ import CoreValues from '../components/CoreValues.astro';
 import QuoteBanner from '../components/QuoteBanner.astro';
 import VisionSection from '../components/VisionSection.astro';
 import ProgramsSection from '../components/ProgramsSection.astro';
-import NewsList from '../components/NewsList.astro';
-import ContactForm from '../components/ContactForm.astro';
+
+export const prerender = true;
 ---
 
 <BaseLayout title="NBI-YOUTH CLUB | คนไทยยุคใหม่ ดี เก่ง กล้า!">
@@ -32,12 +32,6 @@ import ContactForm from '../components/ContactForm.astro';
   
   <!-- Programs Section -->
   <ProgramsSection />
-  
-  <!-- News Section -->
-  <NewsList />
-  
-  <!-- Contact Form Section -->
-  <ContactForm />
   
   <!-- Footer & Contact -->
   <footer id="contact" class="bg-slate-900 text-white pt-20 pb-10 border-t-8 border-nbi-green relative overflow-hidden">
