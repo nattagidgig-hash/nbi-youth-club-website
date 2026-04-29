@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nbi-darkblue: #2F5A6D;
+  --color-nbi-green: #95C565;
+  --color-nbi-teal: #5AC8C8;
+  --color-nbi-red: #F25C43;
+  --color-nbi-yellow: #F4E278;
+  --color-nbi-olive: #749E4A;
+  
+  --font-sans: 'Kanit', 'sans-serif';
+}

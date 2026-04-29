@@ -1,0 +1,69 @@
+---
+// Navigation component - Static HTML (no hydration needed)
+---
+
+<nav class="fixed w-full z-50 glass-effect border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <!-- Logo Area -->
+            <a href="#home" class="flex-shrink-0 flex items-center cursor-pointer hover:opacity-80 transition-opacity">
+                <div class="font-bold text-2xl tracking-tighter flex items-center gap-1">
+                    <span class="text-nbi-teal">N</span>
+                    <span class="text-nbi-red">B</span>
+                    <span class="text-nbi-yellow">I</span>
+                    <span class="text-nbi-darkblue mx-1">-</span>
+                    <span class="text-nbi-green">YOUTH</span>
+                    <span class="text-nbi-darkblue ml-2 uppercase text-lg hidden sm:inline-block">Club</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-6 text-sm">
+                <a href="#home" class="text-nbi-darkblue hover:text-nbi-green font-medium transition-colors">หน้าแรก</a>
+                <a href="#about" class="text-nbi-darkblue hover:text-nbi-green font-medium transition-colors">อุดมการณ์</a>
+                <a href="#vision" class="text-nbi-darkblue hover:text-nbi-green font-medium transition-colors">วิสัยทัศน์</a>
+                <a href="#programs" class="text-nbi-darkblue hover:text-nbi-green font-medium transition-colors">โครงการ</a>
+                <a href="#contact" class="text-nbi-darkblue hover:text-nbi-green font-medium transition-colors">ติดต่อเรา</a>
+                <a href="#contact" class="bg-nbi-darkblue hover:bg-nbi-olive text-white px-5 py-2 rounded-full font-medium transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+                    เข้าร่วมกับเรา
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+                <button class="text-nbi-darkblue hover:text-nbi-green focus:outline-none" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-lg" id="mobile-menu">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-nbi-darkblue hover:text-nbi-green hover:bg-gray-50">หน้าแรก</a>
+            <a href="#about" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-nbi-darkblue hover:text-nbi-green hover:bg-gray-50">อุดมการณ์ของเรา</a>
+            <a href="#vision" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-nbi-darkblue hover:text-nbi-green hover:bg-gray-50">วิสัยทัศน์</a>
+            <a href="#programs" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-nbi-darkblue hover:text-nbi-green hover:bg-gray-50">โครงการและหลักสูตร</a>
+            <a href="#contact" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-nbi-darkblue hover:text-nbi-green hover:bg-gray-50">ติดต่อเรา</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu?.classList.add('hidden');
+        });
+    });
+</script>
