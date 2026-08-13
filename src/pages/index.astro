@@ -25,19 +25,75 @@ export const prerender = true;
         <h2 id="intro-video-title" class="text-3xl md:text-4xl font-bold text-nbi-darkblue mb-4">วิดีโอแนะนำ NBI Youth Club</h2>
         <div class="w-24 h-1.5 bg-nbi-teal mx-auto rounded-full"></div>
       </div>
-      <div class="aspect-video overflow-hidden rounded-3xl shadow-lg bg-slate-900">
-        <iframe
-          class="w-full h-full"
-          src="https://www.youtube-nocookie.com/embed/lJ5oW74XI8U?rel=0"
-          title="วิดีโอแนะนำ NBI Youth Club"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+      <div id="intro-video-player" class="aspect-video overflow-hidden rounded-3xl shadow-lg bg-[url('/หน้าหลัก.png')] bg-cover bg-center">
+        <button id="play-intro-video" type="button" class="group relative w-full h-full" aria-label="เล่นวิดีโอแนะนำ NBI Youth Club">
+          <img src="https://i.ytimg.com/vi/lJ5oW74XI8U/hqdefault.jpg" alt="ภาพปกวิดีโอแนะนำ NBI Youth Club" width="480" height="360" loading="lazy" decoding="async" onerror="this.style.display='none'" class="w-full h-full object-cover" />
+          <span class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/30 transition-colors"></span>
+          <span class="absolute inset-0 flex items-center justify-center">
+            <span class="w-20 h-20 rounded-full bg-white text-nbi-red shadow-xl flex items-center justify-center group-hover:scale-105 transition-transform">
+              <i data-lucide="play" class="w-9 h-9 fill-current ml-1"></i>
+            </span>
+          </span>
+        </button>
       </div>
       <p class="text-center mt-4 text-sm text-gray-500">
         <a href="https://www.youtube.com/watch?v=lJ5oW74XI8U" target="_blank" rel="noopener noreferrer" class="text-nbi-teal hover:text-nbi-darkblue font-medium">เปิดวิดีโอบน YouTube</a>
       </p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('play-intro-video')?.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.className = 'w-full h-full';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/lJ5oW74XI8U?autoplay=1&rel=0';
+      iframe.title = 'วิดีโอแนะนำ NBI Youth Club';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      document.getElementById('intro-video-player')?.replaceChildren(iframe);
+    });
+  </script>
+
+  <!-- Activity Gallery -->
+  <section class="py-20 bg-slate-50" aria-labelledby="activity-gallery-title">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <p class="text-nbi-teal font-semibold tracking-wider uppercase mb-3">จากค่าย สู่การลงมือทำ</p>
+        <h2 id="activity-gallery-title" class="text-3xl md:text-4xl font-bold text-nbi-darkblue mb-4">ภาพกิจกรรมเยาวชนสร้างชาติ</h2>
+        <p class="text-gray-600 text-lg leading-relaxed">สัมผัสบรรยากาศการเรียนรู้ การสร้างเครือข่าย และผลงานของเยาวชนจากชมรมทั่วประเทศ</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="https://www.youtube.com/watch?v=8zsCbgKFtmE" target="_blank" rel="noopener noreferrer" class="group lg:col-span-2 lg:row-span-2 overflow-hidden rounded-3xl bg-nbi-darkblue shadow-sm hover:shadow-lg transition-all">
+          <div class="aspect-video bg-[url('/หน้าหลัก.png')] bg-cover bg-center overflow-hidden">
+            <img src="https://i.ytimg.com/vi/8zsCbgKFtmE/hqdefault.jpg" alt="บรรยากาศค่ายเยาวชนสร้างชาติ รุ่นที่ 17" width="480" height="360" loading="lazy" decoding="async" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6 text-white">
+            <p class="text-nbi-yellow text-sm font-semibold mb-2">NBI-YOUTH CAMP</p>
+            <h3 class="text-2xl font-bold">ค่ายเยาวชนสร้างชาติ รุ่นที่ 17</h3>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=KxXDD2VPakI" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all">
+          <div class="aspect-video bg-[url('/หน้าหลัก.png')] bg-cover bg-center overflow-hidden">
+            <img src="https://i.ytimg.com/vi/KxXDD2VPakI/hqdefault.jpg" alt="กิจกรรมชมรมเยาวชนสร้างชาติในสถานศึกษา" width="480" height="360" loading="lazy" decoding="async" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-nbi-teal text-sm font-semibold mb-2">OPEN CLUB</p>
+            <h3 class="text-xl font-bold text-nbi-darkblue">ชมรมเยาวชนสร้างชาติในสถานศึกษา</h3>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=3Dc9MuVsCsU" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all lg:col-start-3">
+          <div class="aspect-video bg-[url('/หน้าหลัก.png')] bg-cover bg-center overflow-hidden">
+            <img src="https://i.ytimg.com/vi/3Dc9MuVsCsU/hqdefault.jpg" alt="เยาวชนร่วมทำกิจกรรมและโครงการ CCS" width="480" height="360" loading="lazy" decoding="async" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-nbi-green text-sm font-semibold mb-2">CCS & COMMUNITY</p>
+            <h3 class="text-xl font-bold text-nbi-darkblue">พลังเยาวชนลงมือพัฒนาชุมชน</h3>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
   
