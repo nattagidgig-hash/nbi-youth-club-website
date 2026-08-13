@@ -25,8 +25,8 @@ export const prerender = true;
         <h2 id="intro-video-title" class="text-3xl md:text-4xl font-bold text-nbi-darkblue mb-4">วิดีโอแนะนำ NBI Youth Club</h2>
         <div class="w-24 h-1.5 bg-nbi-teal mx-auto rounded-full"></div>
       </div>
-      <div id="intro-video-player" class="aspect-video overflow-hidden rounded-3xl shadow-lg bg-[url('/หน้าหลัก.png')] bg-cover bg-center">
-        <button id="play-intro-video" type="button" class="group relative w-full h-full" aria-label="เล่นวิดีโอแนะนำ NBI Youth Club">
+      <div class="aspect-video overflow-hidden rounded-3xl shadow-lg bg-[url('/หน้าหลัก.png')] bg-cover bg-center">
+        <a href="https://www.youtube.com/watch?v=lJ5oW74XI8U" target="_blank" rel="noopener noreferrer" class="group relative block w-full h-full" aria-label="เปิดวิดีโอแนะนำ NBI Youth Club บน YouTube">
           <img src="https://i.ytimg.com/vi/lJ5oW74XI8U/hqdefault.jpg" alt="ภาพปกวิดีโอแนะนำ NBI Youth Club" width="480" height="360" loading="lazy" decoding="async" onerror="this.style.display='none'" class="w-full h-full object-cover" />
           <span class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/30 transition-colors"></span>
           <span class="absolute inset-0 flex items-center justify-center">
@@ -34,25 +34,13 @@ export const prerender = true;
               <i data-lucide="play" class="w-9 h-9 fill-current ml-1"></i>
             </span>
           </span>
-        </button>
+        </a>
       </div>
       <p class="text-center mt-4 text-sm text-gray-500">
         <a href="https://www.youtube.com/watch?v=lJ5oW74XI8U" target="_blank" rel="noopener noreferrer" class="text-nbi-teal hover:text-nbi-darkblue font-medium">เปิดวิดีโอบน YouTube</a>
       </p>
     </div>
   </section>
-
-  <script>
-    document.getElementById('play-intro-video')?.addEventListener('click', () => {
-      const iframe = document.createElement('iframe');
-      iframe.className = 'w-full h-full';
-      iframe.src = 'https://www.youtube-nocookie.com/embed/lJ5oW74XI8U?autoplay=1&rel=0';
-      iframe.title = 'วิดีโอแนะนำ NBI Youth Club';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.allowFullscreen = true;
-      document.getElementById('intro-video-player')?.replaceChildren(iframe);
-    });
-  </script>
 
   <!-- Activity Gallery -->
   <section class="py-20 bg-slate-50" aria-labelledby="activity-gallery-title">
