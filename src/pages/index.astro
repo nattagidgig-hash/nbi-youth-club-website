@@ -17,6 +17,29 @@ export const prerender = true;
   
   <!-- Hero Section -->
   <Hero />
+
+  <!-- Intro Video -->
+  <section class="py-20 bg-white" aria-labelledby="intro-video-title">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 id="intro-video-title" class="text-3xl md:text-4xl font-bold text-nbi-darkblue mb-4">วิดีโอแนะนำ NBI Youth Club</h2>
+        <div class="w-24 h-1.5 bg-nbi-teal mx-auto rounded-full"></div>
+      </div>
+      <div class="aspect-video overflow-hidden rounded-3xl shadow-lg bg-slate-900">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube-nocookie.com/embed/lJ5oW74XI8U?rel=0"
+          title="วิดีโอแนะนำ NBI Youth Club"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="text-center mt-4 text-sm text-gray-500">
+        <a href="https://www.youtube.com/watch?v=lJ5oW74XI8U" target="_blank" rel="noopener noreferrer" class="text-nbi-teal hover:text-nbi-darkblue font-medium">เปิดวิดีโอบน YouTube</a>
+      </p>
+    </div>
+  </section>
   
   <!-- Stats Section -->
   <Stats />
@@ -57,7 +80,7 @@ export const prerender = true;
             <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1">
               <i data-lucide="facebook" class="w-5 h-5"></i>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-1">
+            <a href="https://www.youtube.com/watch?v=lJ5oW74XI8U" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-1" aria-label="NBI Youth Club บน YouTube">
               <i data-lucide="youtube" class="w-5 h-5"></i>
             </a>
           </div>
